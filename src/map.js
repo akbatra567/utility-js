@@ -4,11 +4,11 @@ const map = (array, functionToCall) => {
 };
 
 const action = (index, lastIndex, array, resultArray, functionToCall) => {
-  if (index > lastIndex) return resultList;
+  if (index > lastIndex) return resultArray;
 
-  resultList.push(functionToCall(array[index]));
+  resultArray.push(functionToCall(array[index]));
 
-  return action(index + 1, lastIndex, list, resultArray, functionToCall);
+  return action(index + 1, lastIndex, array, resultArray, functionToCall);
 };
 
 const cube = (element) => element * element * element;
